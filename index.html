@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashit | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>👋 Hi, I'm <span>Ashit</span></h1>
+            <h2>
+                <span class="typing">Aspiring Web Developer | AI Enthusiast | Problem Solver</span>
+            </h2>
+            <p>
+                Undergrad student with a growing interest in Web Development.
+                Currently focused on building my skills in HTML and CSS. I enjoy
+                creating clean, functional websites and exploring new technologies to
+                enhance my skills.
+            </p>
+        </div>
+        <div class="hero-img">
+            <img src="ashit.jpg" alt="Ashit" />
+        </div>
+    </section>
+    <section id="education">
+  <h2>Education</h2>
+  <div class="edu-item">
+    <h3>Bachelor of Technology (B.Tech) in Artificial Intelligence and Data Science</h3>
+    <p>Samrat Ashok Technological Institute • 2024 – Present</p>
+    <p>Currently pursuing undergraduate studies with a focus on web development, programming, and software engineering.</p>
+  </div>
+</section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <h2>Languages & Technologies</h2>
+        <div class="skills-icons" style="
+          display: flex;
+          gap: 2rem;
+          justify-content: center;
+          flex-wrap: wrap;
+          margin-top: 2rem;
+        ">
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-brands fa-html5" style="font-size: 2rem; color: #e34f26"></i>
+                </span>
+                <span style="margin-top: 0.5rem">HTML</span>
+            </div>
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-brands fa-css3-alt" style="font-size: 2rem; color: #264de4"></i>
+                </span>
+                <span style="margin-top: 0.5rem">CSS</span>
+            </div>
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-brands fa-js" style="font-size: 2rem; color: #f7df1e"></i>
+                </span>
+                <span style="margin-top: 0.5rem">JavaScript</span>
+            </div>
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-brands fa-python" style="font-size: 2rem; color: #3776ab"></i>
+                </span>
+                <span style="margin-top: 0.5rem">Python</span>
+            </div>
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-brands fa-java" style="font-size: 2rem; color: #f89820"></i>
+                </span>
+                <span style="margin-top: 0.5rem">Java</span>
+            </div>
+            <div class="skill-style">
+                <span class="skill-logo">
+                    <i class="fa-solid fa-c" style="font-size: 2rem; color: #555"></i>
+                </span>
+                <span style="margin-top: 0.5rem">C</span>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>A responsive portfolio website built with HTML, CSS, and JS.</p>
+        </div>
+        <div class="project-card">
+            <h3>Simple Registration Form</h3>
+            <p>A clean form with validation using HTML and CSS.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <section id="contact" class="contact">
+            <h2>Connect with Me</h2>
+            <div class="social-links">
+                <a href="https://github.com/Ashit-Bhadouriya" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ashit-singh-bhadouriya-707a74283" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:ashitb85@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </section>
+        <p>© 2025 Ashit | Built with ❤️ using HTML, CSS, JS</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href').replace('#', '');
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                e.preventDefault();
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+            });
+        });
+        // Remove dynamic "About" section creation
+        const toggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>
